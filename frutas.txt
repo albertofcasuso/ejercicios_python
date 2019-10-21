@@ -1,0 +1,8 @@
+pera
+manzana
+sandia
+mandarina
+melon
+tomate
+limon
+papaya

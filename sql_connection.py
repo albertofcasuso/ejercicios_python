@@ -8,12 +8,13 @@ con = mysql.connector.connect(
 )
 
 cursor = con.cursor()
-
-query = cursor.execute("SELECT * FROM Dictionary WHERE Expression =  ")
+consulta = input('Dame una palabra: ')
+# con %s y un % al final defines el valor de %s
+query = cursor.execute("SELECT * FROM Dictionary WHERE Expression ='%s' " % consulta)
 results = cursor.fetchall()
 
 if results:
     for result in results:
-        print(result)
+        print(result[1])
 else:
     print('Sin resultados')
